@@ -50,7 +50,7 @@
 如失败还无法恢复，请及时与华为服务热线800-830-8300或者400-830-8300联系"</string>
     <string name="OK">确定</string>
     <string name="stay_awake_plugging">充电保持唤醒</string>
-    <string name="meui_ssbtn">屏幕截图</string>
+    <string name="quickpanel_ss_text">屏幕截图</string>
     <string name="quickpanel_wifi_text">Wi-Fi</string>
     <string name="quickpanel_bluetooth_text">蓝牙</string>
     <string name="quickpanel_gps_text">GPS</string>

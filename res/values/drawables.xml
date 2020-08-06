@@ -251,7 +251,6 @@
     <item type="drawable" name="quickpanel_icon_vibration_off">false</item>
     <item type="drawable" name="quickpanel_icon_wifi_off">false</item>
     <item type="drawable" name="quickpanel_icon_wifi_on">false</item>
-    <item type="drawable" name="dynamic_status_bar_drawable_gradient">false</item>
     <item type="drawable" name="status_bar_close">false</item>
     <item type="drawable" name="tile_toggle">false</item>
     <item type="drawable" name="title_jb_bar_header">false</item>

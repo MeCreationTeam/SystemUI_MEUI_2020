@@ -19,7 +19,6 @@
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/panel_left" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">
-            <com.meui.SSButton android:background="@drawable/quickpanel_plmn_background" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/meui_ssbtn" />
             <com.lidroid.systemui.quickpanel.PowerWidget android:id="@id/Lidroid" android:background="@drawable/fmd_meui_bg" android:paddingTop="-1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:id="@id/panel_medium" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">

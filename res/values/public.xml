@@ -260,7 +260,7 @@
     <public type="drawable" name="quickpanel_icon_vibration_off" id="0x7f0201c8" />
     <public type="drawable" name="quickpanel_icon_wifi_off" id="0x7f0201c9" />
     <public type="drawable" name="quickpanel_icon_wifi_on" id="0x7f0201ca" />
-    <public type="drawable" name="dynamic_status_bar_drawable_gradient" id="0x7f0201cd" />
+    <public type="drawable" name="stat_screenshot" id="0x7f0201cd" />
     <public type="drawable" name="status_bar_close" id="0x7f0201ce" />
     <public type="drawable" name="tile_toggle" id="0x7f0201d0" />
     <public type="drawable" name="title_jb_bar_header" id="0x7f0201d1" />
@@ -638,7 +638,7 @@
     <public type="string" name="spomc_sync" id="0x7f080040" />
     <public type="string" name="spomc_settings" id="0x7f080041" />
     <public type="string" name="spomc_control" id="0x7f080042" />
-    <public type="string" name="meui_ssbtn" id="0x7f080043" />
+    <public type="string" name="quickpanel_ss_text" id="0x7f080043" />
     <public type="string" name="spomc_brightness" id="0x7f080044" />
     <public type="string" name="spomc_weather" id="0x7f080045" />
     <public type="string" name="spomc_volumes" id="0x7f080046" />

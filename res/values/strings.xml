@@ -70,7 +70,7 @@ If you do net have data plan, it may incur additional charges."</string>
     <string name="spomc_sync" />
     <string name="spomc_settings" />
     <string name="spomc_control" />
-    <string name="meui_ssbtn">Take Screenshot</string>
+    <string name="quickpanel_ss_text">Screenshot</string>
     <string name="spomc_brightness" />
     <string name="spomc_weather" />
     <string name="spomc_volumes" />
