@@ -52,6 +52,8 @@
 
 .field public static final BUTTON_REBOOT:Ljava/lang/String; = "toggleReboot"
 
+.field public static final BUTTON_SCREENSHOT:Ljava/lang/String; = "toggleScreenshot"
+
 .field public static final BUTTON_SCREENTIMEOUT:Ljava/lang/String; = "toggleScreenTimeout"
 
 .field public static final BUTTON_SHUTDOWN:Ljava/lang/String; = "toggleShutdown"
@@ -276,6 +278,14 @@
     const-string v1, "toggleBatteryInfo"
 
     const-class v2, Lcom/lidroid/systemui/quickpanel/BatteryInfoButton;
+
+    invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    sget-object v0, Lcom/lidroid/systemui/quickpanel/PowerButton;->BUTTONS:Ljava/util/HashMap;
+
+    const-string v1, "toggleScreenshot"
+
+    const-class v2, Lcom/lidroid/systemui/quickpanel/ScreenshotButton;
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 

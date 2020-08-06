@@ -13,7 +13,7 @@
 
 
 # static fields
-.field private static final BUTTONS_DEFAULT:Ljava/lang/String; = "toggleWifi|toggleMobileData|toggleBluetooth|toggleBatteryInfo|toggleGPS|toggleFlashlight|toggleWifiAp|toggleBrightness|toggleAirplane|toggleSound|toggleAutoRotate|toggleSync|toggleStayAwakePlugged|toggleScreenTimeout|toggleLockScreen|toggleReboot|toggleShutdown|toggleNetworkMode|toggleUSBDebugging"
+.field private static final BUTTONS_DEFAULT:Ljava/lang/String; = "toggleWifi|toggleMobileData|toggleBluetooth|toggleBatteryInfo|toggleGPS|toggleFlashlight|toggleWifiAp|toggleBrightness|toggleAirplane|toggleSound|toggleAutoRotate|toggleSync|toggleStayAwakePlugged|toggleScreenTimeout|toggleLockScreen|toggleReboot|toggleShutdown|toggleNetworkMode|toggleUSBDebugging|toggleScreenshot"
 
 .field public static final BUTTON_DELIMITER:Ljava/lang/String; = "|"
 
@@ -1127,7 +1127,7 @@
 
     invoke-static {v11, v9}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    const-string v4, "toggleWifi|toggleMobileData|toggleBluetooth|toggleBatteryInfo|toggleGPS|toggleFlashlight|toggleWifiAp|toggleBrightness|toggleAirplane|toggleSound|toggleAutoRotate|toggleSync|toggleStayAwakePlugged|toggleScreenTimeout|toggleLockScreen|toggleReboot|toggleShutdown|toggleNetworkMode|toggleUSBDebugging"
+    const-string v4, "toggleWifi|toggleMobileData|toggleBluetooth|toggleBatteryInfo|toggleGPS|toggleFlashlight|toggleWifiAp|toggleBrightness|toggleAirplane|toggleSound|toggleAutoRotate|toggleSync|toggleStayAwakePlugged|toggleScreenTimeout|toggleLockScreen|toggleReboot|toggleShutdown|toggleNetworkMode|toggleUSBDebugging|toggleScreenshot"
 
     :cond_1
     const-string v9, "PowerWidget"
