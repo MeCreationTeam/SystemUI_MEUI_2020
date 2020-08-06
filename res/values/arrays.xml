@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="shutdown_reboot_options">
+        <item>@string/quickpanel_reboot</item>
+        <item>@string/quickpanel_recovery</item>
+    </string-array>
+    <string-array name="shutdown_reboot_actions">
+        <item>now</item>
+        <item>recovery</item>
+    </string-array>
+    <string-array name="usb_connection_mode_options">
+        <item>@string/usb_mpt_mode</item>
+        <item>@string/usb_msc_mode</item>
+    </string-array>
+    <string-array name="usb_connection_mode_actions">
+        <item>mtp</item>
+        <item>mass_storage</item>
+    </string-array>
+    <string-array name="battery_info_options">
+        <item>@string/battery_info_info</item>
+        <item>@string/battery_info_usage</item>
+    </string-array>
+    <string-array name="battery_info_actions">
+        <item>battery_info</item>
+        <item>battery_usage</item>
+    </string-array>
+</resources>

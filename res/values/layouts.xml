@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="zzz_status_bar_expanded_gemini">false</item>
+    <item type="layout" name="zzz_toolbar_configuration_icon_view">false</item>
+    <item type="layout" name="zzz_toolbar_configuration_switch_panel">false</item>
+    <item type="layout" name="zzz_toolbar_connection_switch_panel">false</item>
+    <item type="layout" name="zzz_toolbar_cutline">false</item>
+    <item type="layout" name="zzz_toolbar_dialog_sim_icon">false</item>
+    <item type="layout" name="zzz_toolbar_indicator">false</item>
+    <item type="layout" name="zzz_toolbar_profile_switch_panel">false</item>
+    <item type="layout" name="zzz_toolbar_sim_icon_view">false</item>
+    <item type="layout" name="zzz_toolbar_sim_switch_panel">false</item>
+    <item type="layout" name="zzz_toolbar_view">false</item>
+    <item type="layout" name="brightness_bar">false</item>
+    <item type="layout" name="fb1">false</item>
+    <item type="layout" name="fb2">false</item>
+    <item type="layout" name="spomc_toggle_button">false</item>
+    <item type="layout" name="spomc_toggle_button_two">false</item>
+    <item type="layout" name="keur_tanggal_simple">false</item>
+</resources>

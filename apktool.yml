@@ -1,0 +1,13 @@
+version: 1.5.2
+apkFileName: 1SystemUI9-8-B3-B-SPEtraf_src.apk
+isFrameworkApk: false
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: '10'
+  targetSdkVersion: '10'
+packageInfo:
+  cur_package: com.android.systemui
+  orig_package: com.android.systemui
+compressionType: true

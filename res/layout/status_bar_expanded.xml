@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.systemui.statusbar.ExpandedView android:orientation="vertical" android:focusable="true" android:descendantFocusability="afterDescendants"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.systemui.statusbar.add.PanelSwitcher android:id="@id/panelswitch" android:background="#00000000" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/quickpanel_title_background" android:layout_width="fill_parent" android:layout_height="52.0dip">
+            <LinearLayout android:gravity="left" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip">
+                <com.android.systemui.statusbar.Clock android:textSize="20.0sp" android:textStyle="normal" android:textColor="#ffdfdfdf" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="-8.0dip" />
+                <com.tenten.LDateBar android:textSize="11.0sp" android:layout_gravity="left|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="-48.0dip" android:layout_marginTop="8.0dip" />
+                <Button android:layout_gravity="left|center" android:id="@id/btn_left" android:background="@drawable/ic_tab_toggle" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+                <Button android:layout_gravity="left|center" android:id="@id/btn_medium" android:background="@drawable/ic_tab_notif" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+                <Button android:layout_gravity="left|center" android:id="@id/btn_right" android:background="@drawable/ic_tab_meui" android:layout_width="24.0dip" android:layout_height="24.0dip" />
+            </LinearLayout>
+            <LinearLayout android:gravity="right" android:orientation="horizontal" android:paddingRight="6.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.tenten.LBatteryBar android:paddingLeft="2.0dip" android:layout_width="wrap_content" android:layout_height="26.0dip" />
+                <com.tenten.LWifiBar android:paddingLeft="2.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" android:scaleType="fitCenter" />
+                <com.tenten.LSignalBar android:layout_width="wrap_content" android:layout_height="30.0dip" />
+                <com.tenten.LAlarmBar android:paddingLeft="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <com.tenten.LSettingsBar android:paddingLeft="6.0dip" android:layout_width="30.0dip" android:layout_height="30.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_gravity="top|center" android:orientation="vertical" android:id="@id/panel_left" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">
+            <com.meui.SSButton android:background="@drawable/quickpanel_plmn_background" android:layout_width="fill_parent" android:layout_height="32.0dip" android:text="@string/meui_ssbtn" />
+            <com.lidroid.systemui.quickpanel.PowerWidget android:id="@id/Lidroid" android:background="@drawable/fmd_meui_bg" android:paddingTop="-1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/panel_medium" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">
+            <com.android.systemui.statusbar.CarrierLabel android:layout_gravity="center" android:id="@id/carrierlabel_spn0" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <com.android.systemui.statusbar.CarrierLabel android:layout_gravity="center" android:id="@id/carrierlabel_spn1" android:layout_width="0.0dip" android:layout_height="0.0dip" />
+            <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <ScrollView android:id="@id/scroll" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:overScrollMode="ifContentScrolls">
+                    <com.android.systemui.statusbar.NotificationLinearLayout android:orientation="vertical" android:id="@id/notificationLinearLayout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <TextView android:textAppearance="@style/TextAppearance.StatusBar.Title" android:id="@id/noNotificationsTitle" android:background="@drawable/quickpanel_plmn_background" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/status_bar_no_notifications_title" />
+                        <TextView android:textAppearance="@style/TextAppearance.StatusBar.Title" android:id="@id/ongoingTitle" android:background="@drawable/quickpanel_plmn_background" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/status_bar_ongoing_events_title" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/ongoingItems" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <TextView android:textAppearance="@style/TextAppearance.StatusBar.Title" android:id="@id/latestTitle" android:background="@drawable/quickpanel_plmn_background" android:paddingLeft="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/status_bar_latest_events_title" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/latestItems" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                        <Button android:textColor="#ffffffff" android:layout_gravity="right" android:id="@id/clear_all_button" android:background="@drawable/btn_clear_normal" android:layout_width="40.0dip" android:layout_height="40.0dip" android:text="" />
+                    </com.android.systemui.statusbar.NotificationLinearLayout>
+                </ScrollView>
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/panel_right" android:paddingTop="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="3.0dip">
+            <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:background="@drawable/quickpanel_plmn_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.tenten.LenoxPicture android:gravity="top|center" android:layout_gravity="top|center" android:layout_width="fill_parent" android:layout_height="95.0dip" android:layout_marginLeft="0.0dip" android:layout_marginTop="2.5dip" />
+                <com.tenten.LenoxLabel android:gravity="top|left|center" android:layout_gravity="top|center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:layout_marginTop="2.5dip" android:scaleType="centerInside" />
+            </LinearLayout>
+            <include layout="@layout/slider_controls" />
+        </LinearLayout>
+    </com.android.systemui.statusbar.add.PanelSwitcher>
+</com.android.systemui.statusbar.ExpandedView>

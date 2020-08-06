@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:sharedUserId="android.uid.system" android:process="system" android:versionCode="10" android:versionName="2.3.5" package="com.android.systemui"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.STATUS_BAR_SERVICE" />
+    <uses-permission android:name="android.permission.MANAGE_USB" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.meui.RomCtrl.READ" />
+    <application android:label="@string/app_label" android:allowClearUserData="false" android:persistent="true">
+        <service android:name=".statusbar.StatusBarService" android:exported="false" />
+        <activity android:name=".usb.UsbStorageActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name="com.android.internal.app.ExternalMediaFormatActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbConfirmActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbPermissionActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbResolverActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbAccessoryUriActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <receiver android:name=".usb.StorageNotifyRecevier">
+            <intent-filter />
+        </receiver>
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:name="com.lidroid.systemui.quickpanel.FlashlightActivity" android:clearTaskOnLaunch="true" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+    </application>
+</manifest>
