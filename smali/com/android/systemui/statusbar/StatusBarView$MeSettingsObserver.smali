@@ -21,7 +21,10 @@
 # direct methods
 .method public constructor <init>(Lcom/android/systemui/statusbar/StatusBarView;)V
     .locals 1
+    .parameter
 
+    .prologue
+    .line 115
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -45,6 +48,7 @@
 # virtual methods
 .method public onChange(Z)V
     .locals 4
+    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(Z)V"
@@ -54,34 +58,17 @@
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
+    .prologue
+    .line 120
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
+    .line 122
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
     #getter for: Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$L1000002(Lcom/android/systemui/statusbar/StatusBarView;)Landroid/content/ContentResolver;
-
-    move-result-object v1
-
-    const-string v2, "sb_check_delay"
-
-    const/16 v3, 0xbb8
-
-    invoke-static {v1, v2, v3}, Landroid/provider/Settings$System;->getInt(Landroid/content/ContentResolver;Ljava/lang/String;I)I
-
-    move-result v1
-
-    #setter for: Lcom/android/systemui/statusbar/StatusBarView;->mDelay:I
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$S1000004(Lcom/android/systemui/statusbar/StatusBarView;I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
-    invoke-static {v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$L1000002(Lcom/android/systemui/statusbar/StatusBarView;)Landroid/content/ContentResolver;
+    invoke-static {v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$L1000001(Lcom/android/systemui/statusbar/StatusBarView;)Landroid/content/ContentResolver;
 
     move-result-object v1
 
@@ -94,7 +81,7 @@
     move-result v1
 
     #setter for: Lcom/android/systemui/statusbar/StatusBarView;->mDefaultColor:I
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$S1000005(Lcom/android/systemui/statusbar/StatusBarView;I)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$S1000003(Lcom/android/systemui/statusbar/StatusBarView;I)V
 
     return-void
 .end method
