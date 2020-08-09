@@ -48,6 +48,8 @@
     invoke-direct {v0, v1, v2}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mDoubleTapGesture:Landroid/view/GestureDetector;
+    .line 28
+    invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     const-string v0, "content://com.meui.RomCtrl/BarColors"
 
@@ -57,26 +59,28 @@
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->CONTENT_URI:Landroid/net/Uri;
 
-    const/16 v0, 0xbb8
-
-    iput v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mDelay:I
-
     const/high16 v0, 0x4d00
 
     iput v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mDefaultColor:I
 
+    .line 29
+    iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarView;->mContext:Landroid/content/Context;
+
+    .line 30
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
 
+    .line 31
     new-instance v0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;
 
     invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;-><init>(Lcom/android/systemui/statusbar/StatusBarView;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mObserver:Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;
 
+    .line 34
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
 
     const-string v1, "sb_default_color"

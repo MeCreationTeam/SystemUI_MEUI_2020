@@ -161,7 +161,7 @@
 
     iput v0, p0, Lcom/lidroid/systemui/quickpanel/BatteryInfoButton;->mState:I
 
-    const v0, 0x7f020202
+    const v0, 0x10802da
 
     iput v0, p0, Lcom/lidroid/systemui/quickpanel/BatteryInfoButton;->mIcon:I
 
