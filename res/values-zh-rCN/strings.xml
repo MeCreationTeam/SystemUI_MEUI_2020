@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_label">状态栏</string>
+    <string name="app_label">系统用户界面</string>
     <string name="status_bar_clear_all_button" />
     <string name="status_bar_no_notifications_title">无通知</string>
     <string name="status_bar_ongoing_events_title">正在进行的</string>
@@ -16,11 +16,11 @@
     <string name="mobile_data_connect_disable">否</string>
     <string name="mobile_data_connect_enable">是</string>
     <string name="network_disconnect_title">通知</string>
-    <string name="network_disconnect_message">"WLAN网络已经断开。
+    <string name="network_disconnect_message">"WLAN 网络已经断开。
 通过3G网络进行连接? 
 如果您没有订购数据业务套餐，这将产生一些费用"</string>
     <string name="weak_signal_title">信号弱</string>
-    <string name="weak_signal_message">当前WLAN的信号较弱，建议您选择信号较好的接入点</string>
+    <string name="weak_signal_message">当前 WLAN 的信号较弱，建议您选择信号较好的接入点</string>
     <string name="auto_connect">不再询问，总是自动连接其他信任接入点</string>
     <string name="battery_over_voltage">充电器过压，请移除！</string>
     <string name="battery_over_temp">温度过高，禁止充电 !</string>
@@ -46,27 +46,27 @@
     <string name="pm_vibrate">振动</string>
     <string name="pm_outdoor">户外</string>
     <string name="Wifi_Title">WLAN 初始化失败</string>
-    <string name="Wifi_error_info">"手机WIFI初始化失败，请重启手机进行再次开机尝试。
-如失败还无法恢复，请及时与华为服务热线800-830-8300或者400-830-8300联系"</string>
+    <string name="Wifi_error_info">"手机 WIFI 初始化失败，请重启手机进行再次开机尝试。
+如失败还无法恢复，请及时与华为服务热线950800或者400-830-8300联系"</string>
     <string name="OK">确定</string>
     <string name="stay_awake_plugging">充电保持唤醒</string>
     <string name="quickpanel_ss_text">屏幕截图</string>
     <string name="quickpanel_wifi_text">Wi-Fi</string>
     <string name="quickpanel_bluetooth_text">蓝牙</string>
-    <string name="quickpanel_gps_text">GPS</string>
+    <string name="quickpanel_gps_text">位置信息</string>
     <string name="quickpanel_sound_text">响铃</string>
     <string name="quickpanel_sound_vibration_text">振铃</string>
     <string name="quickpanel_silent_text">静音</string>
     <string name="quickpanel_vibration_text">振动</string>
     <string name="quickpanel_rotation_text">自动转屏</string>
     <string name="quickpanel_shutdown_text">关机</string>
-    <string name="quickpanel_shutdown_confirm">关机?</string>
+    <string name="quickpanel_shutdown_confirm">关机？</string>
     <string name="quickpanel_sound_vibrate">振动</string>
     <string name="quickpanel_sound_sound">响铃</string>
     <string name="quickpanel_sound_silent">静音</string>
     <string name="quickpanel_sound_sound_vibrate">振铃</string>
     <string name="quickpanel_sync">自动同步</string>
-    <string name="quickpanel_wifiap">Wi-Fi个人热点</string>
+    <string name="quickpanel_wifiap">个人热点</string>
     <string name="quickpanel_wifi">Wifi</string>
     <string name="quickpanel_rotation">自动转屏</string>
     <string name="quickpanel_airplane">飞行模式</string>
@@ -78,15 +78,15 @@
     <string name="quickpanel_reboot">重启</string>
     <string name="quickpanel_reboot_text">重启选项</string>
     <string name="quickpanel_screen_timeout">屏幕超时</string>
-    <string name="quickpanel_recovery">Recovery模式</string>
+    <string name="quickpanel_recovery">Recovery 模式</string>
     <string name="quickpanel_network_mode_text">网络制式</string>
-    <string name="usb_msc_mode">Wi-Fi热点</string>
+    <string name="usb_msc_mode">Wi-Fi 热点</string>
     <string name="usb_mpt_mode">MPT - Media Transfer</string>
     <string name="battery_info_info">电池信息</string>
     <string name="battery_info_usage">电量使用情况</string>
     <string name="quickpanel_battery_info_text">电池信息</string>
-    <string name="quickpanel_usb_debugging_text">USB调试</string>
-    <string name="quickpanel_usb_connection_mode_text">USB连接模式</string>
+    <string name="quickpanel_usb_debugging_text">USB 调试</string>
+    <string name="quickpanel_usb_connection_mode_text">USB 连接模式</string>
     <string name="quickpanel_usb_current_mtp_title">电流模式: MPT</string>
     <string name="quickpanel_usb_current_msc_title">电流模式: MSC</string>
     <string name="quickpanel_autosync_text">自动同步</string>

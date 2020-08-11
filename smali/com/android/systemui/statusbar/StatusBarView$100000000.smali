@@ -1,5 +1,5 @@
 .class Lcom/android/systemui/statusbar/StatusBarView$100000000;
-.super Landroid/app/IActivityWatcher$Stub;
+.super Landroid/os/Handler;
 .source "StatusBarView.java"
 
 
@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/IActivityWatcher$Stub;-><init>()V
+    invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
@@ -43,12 +43,14 @@
 
 
 # virtual methods
-.method public activityResuming(I)V
+.method public handleMessage(Landroid/os/Message;)V
     .locals 2
     .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
-            "(I)V"
+            "(",
+            "Landroid/os/Message;",
+            ")V"
         }
     .end annotation
 
@@ -56,29 +58,13 @@
     .end annotation
 
     .prologue
-    .line 82
+    .line 81
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->val$am:Landroid/app/ActivityManager;
 
     #calls: Lcom/android/systemui/statusbar/StatusBarView;->tint(Landroid/app/ActivityManager;)V
     invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$1000006(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
-
-    return-void
-.end method
-
-.method public closingSystemDialogs(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
-    .annotation runtime Ljava/lang/Override;
-    .end annotation
 
     return-void
 .end method

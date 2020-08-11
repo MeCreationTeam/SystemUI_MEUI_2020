@@ -439,7 +439,7 @@
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-   .line 77
+.line 76
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
 
     const-string v1, "sb_default_color"
@@ -454,7 +454,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 78
+    .line 77
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mContext:Landroid/content/Context;
 
     const-string v1, "activity"
@@ -465,14 +465,19 @@
 
     check-cast v0, Landroid/app/ActivityManager;
 
-    .line 79
+    .line 78
     new-instance v1, Lcom/android/systemui/statusbar/StatusBarView$100000000;
 
     invoke-direct {v1, p0, v0}, Lcom/android/systemui/statusbar/StatusBarView$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
 
-    iput-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView;->watcher:Landroid/app/IActivityWatcher$Stub;
+    .line 84
+    new-instance v2, Lcom/android/systemui/statusbar/StatusBarView$100000001;
 
-    .line 88
+    invoke-direct {v2, p0, v1}, Lcom/android/systemui/statusbar/StatusBarView$100000001;-><init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/os/Handler;)V
+
+    iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarView;->watcher:Landroid/app/IActivityWatcher$Stub;
+
+    .line 93
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
@@ -484,13 +489,13 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 92
+    .line 97
     :goto_0
     invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/StatusBarView;->tint(Landroid/app/ActivityManager;)V
 
     return-void
 
-    .line 88
+    .line 93
     :catch_0
     move-exception v1
 

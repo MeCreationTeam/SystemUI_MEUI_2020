@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_label">Status Bar</string>
+    <string name="app_label">System UI</string>
     <string name="status_bar_clear_all_button">Clear</string>
     <string name="status_bar_no_notifications_title">No notifications</string>
     <string name="status_bar_ongoing_events_title">Ongoing</string>
@@ -51,7 +51,7 @@ If you do net have data plan, it may incur additional charges."</string>
     <string name="pm_outdoor">Outdoor</string>
     <string name="Wifi_Title">WLAN loading error</string>
     <string name="Wifi_error_info">"Mobile phone WIFI initialization failed, please try again to restart the mobile phone boot. 
- if the failure cannot be recovered, please promptly with Huawei service hotline 800-830-8300 or 400-830-8300 connection"</string>
+ if the failure cannot be recovered, please promptly with Huawei service hotline 950800 or 400-830-8300 connection"</string>
     <string name="OK">OK</string>
     <string name="brightness_settings_title" />
     <string name="brightness_settings_automatic" />
@@ -115,7 +115,7 @@ If you do net have data plan, it may incur additional charges."</string>
     <string name="accessibility_settings_button">System settings.</string>
     <string name="quickpanel_wifi_text">Wi-Fi</string>
     <string name="quickpanel_bluetooth_text">Bluetooth</string>
-    <string name="quickpanel_gps_text">GPS</string>
+    <string name="quickpanel_gps_text">Location</string>
     <string name="quickpanel_sound_text">Sound</string>
     <string name="quickpanel_sound_vibration_text">Sound Vibration</string>
     <string name="quickpanel_silent_text">Silent</string>
@@ -135,7 +135,7 @@ If you do net have data plan, it may incur additional charges."</string>
     <string name="quickpanel_bluetooth">Bluetooth</string>
     <string name="quickpanel_brightness">Brightness</string>
     <string name="quickpanel_flashlight">Flashlight</string>
-    <string name="quickpanel_gps">GPS</string>
+    <string name="quickpanel_gps">Location</string>
     <string name="quickpanel_lockscreen">Lockscreen</string>
     <string name="quickpanel_mobiledata">Data</string>
     <string name="quickpanel_reboot">Reboot</string>
