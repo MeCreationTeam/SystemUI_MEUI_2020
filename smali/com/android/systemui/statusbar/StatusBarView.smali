@@ -28,7 +28,7 @@
 
 .field private final resolver:Landroid/content/ContentResolver;
 
-.field private watcher:Landroid/app/IActivityWatcher$Stub;
+.field private controller:Landroid/app/IActivityController$Stub;
 
 
 # direct methods
@@ -97,10 +97,10 @@
     return-void
 .end method
 
-.method static synthetic access$1000006(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
+.method static synthetic access$1000006(Lcom/android/systemui/statusbar/StatusBarView;Ljava/lang/String;)V
     .locals 0
 
-    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/StatusBarView;->tint(Landroid/app/ActivityManager;)V
+    invoke-direct {p0, p1}, Lcom/android/systemui/statusbar/StatusBarView;->tint(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -256,66 +256,46 @@
     return v1
 .end method
 
-.method private final tint(Landroid/app/ActivityManager;)V
-    .locals 8
+.method private final tint(Ljava/lang/String;)V
+    .locals 7
     .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
-            "Landroid/app/ActivityManager;",
+            "Ljava/lang/String;",
             ")V"
         }
     .end annotation
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v6, 0x1
 
     const/4 v5, 0x0
 
-    const/4 v7, 0x1
+    .line 74
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    .line 54
-    invoke-virtual {p1, v7}, Landroid/app/ActivityManager;->getRunningTasks(I)Ljava/util/List;
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-    move-result-object v0
-
-    invoke-interface {v0, v6}, Ljava/util/List;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/app/ActivityManager$RunningTaskInfo;
-
-    .line 55
-    iget-object v0, v0, Landroid/app/ActivityManager$RunningTaskInfo;->topActivity:Landroid/content/ComponentName;
-
-    invoke-virtual {v0}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 56
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    new-instance v2, Ljava/lang/StringBuffer;
+    const-string v2, "packageName=\""
 
-    invoke-direct {v2}, Ljava/lang/StringBuffer;-><init>()V
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    const-string v3, "packageName=\""
+    move-result-object v1
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v0
 
@@ -329,7 +309,7 @@
 
     move-result-object v3
 
-    .line 57
+    .line 75
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView;->CONTENT_URI:Landroid/net/Uri;
@@ -348,7 +328,7 @@
 
     move-result-object v1
 
-    .line 58
+    .line 76
     if-eqz v1, :cond_2
 
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
@@ -357,7 +337,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 59
+    .line 77
     const-string v0, "hasColor"
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -368,15 +348,15 @@
 
     move-result v0
 
-    if-eq v0, v7, :cond_0
+    if-eq v0, v6, :cond_0
 
-    move v0, v6
+    const/4 v0, 0x0
 
-    .line 60
+    .line 78
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 62
+    .line 80
     const-string v0, "color"
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -387,30 +367,30 @@
 
     move-result v0
 
-    .line 64
+    .line 82
     :goto_1
     invoke-virtual {p0, v0}, Lcom/android/systemui/statusbar/StatusBarView;->setBackgroundColor(I)V
 
-    .line 65
+    .line 83
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 67
+    .line 85
     :goto_2
     return-void
 
     :cond_0
-    move v0, v7
+    move v0, v6
 
-    .line 59
+    .line 77
     goto :goto_0
 
-    .line 63
+    .line 81
     :cond_1
     iget v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mDefaultColor:I
 
     goto :goto_1
 
-    .line 67
+    .line 85
     :cond_2
     iget v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mDefaultColor:I
 
@@ -439,7 +419,7 @@
 
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-.line 76
+    .line 93
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->resolver:Landroid/content/ContentResolver;
 
     const-string v1, "sb_default_color"
@@ -454,50 +434,35 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 
-    .line 77
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mContext:Landroid/content/Context;
+    .line 96
+    new-instance v0, Lcom/android/systemui/statusbar/StatusBarView$100000000;
 
-    const-string v1, "activity"
+    invoke-direct {v0, p0}, Lcom/android/systemui/statusbar/StatusBarView$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarView;)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    .line 102
+    new-instance v1, Lcom/android/systemui/statusbar/StatusBarView$100000001;
 
-    move-result-object v0
+    invoke-direct {v1, p0, v0}, Lcom/android/systemui/statusbar/StatusBarView$100000001;-><init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/os/Handler;)V
 
-    check-cast v0, Landroid/app/ActivityManager;
+    iput-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView;->controller:Landroid/app/IActivityController$Stub;
 
-    .line 78
-    new-instance v1, Lcom/android/systemui/statusbar/StatusBarView$100000000;
-
-    invoke-direct {v1, p0, v0}, Lcom/android/systemui/statusbar/StatusBarView$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
-
-    .line 84
-    new-instance v2, Lcom/android/systemui/statusbar/StatusBarView$100000001;
-
-    invoke-direct {v2, p0, v1}, Lcom/android/systemui/statusbar/StatusBarView$100000001;-><init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/os/Handler;)V
-
-    iput-object v2, p0, Lcom/android/systemui/statusbar/StatusBarView;->watcher:Landroid/app/IActivityWatcher$Stub;
-
-    .line 93
+    .line 146
     :try_start_0
     invoke-static {}, Landroid/app/ActivityManagerNative;->getDefault()Landroid/app/IActivityManager;
 
-    move-result-object v1
+    move-result-object v0
 
-    iget-object v2, p0, Lcom/android/systemui/statusbar/StatusBarView;->watcher:Landroid/app/IActivityWatcher$Stub;
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView;->controller:Landroid/app/IActivityController$Stub;
 
-    invoke-interface {v1, v2}, Landroid/app/IActivityManager;->registerActivityWatcher(Landroid/app/IActivityWatcher;)V
+    invoke-interface {v0, v1}, Landroid/app/IActivityManager;->setActivityController(Landroid/app/IActivityController;)V
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :goto_0
-    invoke-direct {p0, v0}, Lcom/android/systemui/statusbar/StatusBarView;->tint(Landroid/app/ActivityManager;)V
-
     return-void
 
-    .line 93
     :catch_0
-    move-exception v1
+    move-exception v0
 
     goto :goto_0
 .end method
@@ -513,9 +478,11 @@
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
+    .prologue
+    .line 164
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 108
+    .line 165
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mObserver:Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;
 
     if-eqz v0, :cond_0

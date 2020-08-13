@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.SET_ACTIVITY_WATCHER" />
     <uses-permission android:name="com.meui.RomCtrl.READ" />
     <application android:label="@string/app_label" android:allowClearUserData="false" android:persistent="true">
         <service android:name=".statusbar.StatusBarService" android:exported="false" />

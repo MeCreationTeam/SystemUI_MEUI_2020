@@ -17,18 +17,14 @@
 # instance fields
 .field private final this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
-.field private final val$am:Landroid/app/ActivityManager;
-
 
 # direct methods
-.method constructor <init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
+.method constructor <init>(Lcom/android/systemui/statusbar/StatusBarView;)V
     .locals 0
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
-
-    iput-object p2, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->val$am:Landroid/app/ActivityManager;
 
     return-void
 .end method
@@ -44,7 +40,7 @@
 
 # virtual methods
 .method public handleMessage(Landroid/os/Message;)V
-    .locals 2
+    .locals 3
     .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
@@ -58,13 +54,21 @@
     .end annotation
 
     .prologue
-    .line 81
+    .line 99
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
-    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000000;->val$am:Landroid/app/ActivityManager;
+    invoke-virtual {p1}, Landroid/os/Message;->getData()Landroid/os/Bundle;
 
-    #calls: Lcom/android/systemui/statusbar/StatusBarView;->tint(Landroid/app/ActivityManager;)V
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$1000006(Lcom/android/systemui/statusbar/StatusBarView;Landroid/app/ActivityManager;)V
+    move-result-object v1
+
+    const-string v2, "pkgName"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    #calls: Lcom/android/systemui/statusbar/StatusBarView;->tint(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->access$1000006(Lcom/android/systemui/statusbar/StatusBarView;Ljava/lang/String;)V
 
     return-void
 .end method

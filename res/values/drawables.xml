@@ -268,4 +268,6 @@
     <item type="drawable" name="stat_sys_bt_switch_anim2">false</item>
     <item type="drawable" name="stat_sys_bt_switch_anim3">false</item>
     <item type="drawable" name="stat_sys_bt_switch_anim4">false</item>
+    <item type="drawable" name="stat_sys_mobile_switch_anim">false</item>
+    <item type="drawable" name="stat_sys_wifi_switch_anim">false</item>
 </resources>

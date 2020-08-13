@@ -1,5 +1,5 @@
 .class Lcom/android/systemui/statusbar/StatusBarView$100000001;
-.super Landroid/app/IActivityWatcher$Stub;
+.super Landroid/app/IActivityController$Stub;
 .source "StatusBarView.java"
 
 
@@ -24,7 +24,7 @@
 .method constructor <init>(Lcom/android/systemui/statusbar/StatusBarView;Landroid/os/Handler;)V
     .locals 0
 
-    invoke-direct {p0}, Landroid/app/IActivityWatcher$Stub;-><init>()V
+    invoke-direct {p0}, Landroid/app/IActivityController$Stub;-><init>()V
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000001;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
@@ -43,43 +43,100 @@
 
 
 # virtual methods
-.method public activityResuming(I)V
-    .locals 2
+.method public activityResuming(Ljava/lang/String;)Z
+    .locals 3
     .parameter
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(I)V"
-        }
-    .end annotation
-
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
     .prologue
-    .line 87
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$100000001;->val$mHandler:Landroid/os/Handler;
+    .line 107
+    new-instance v0, Landroid/os/Message;
 
-    new-instance v1, Landroid/os/Message;
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
 
-    invoke-direct {v1}, Landroid/os/Message;-><init>()V
+    .line 108
+    new-instance v1, Landroid/os/Bundle;
 
-    invoke-virtual {v0, v1}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    return-void
+    .line 109
+    const-string v2, "pkgName"
+
+    invoke-virtual {v1, v2, p1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 110
+    invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    .line 111
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000001;->val$mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    .line 112
+    const/4 v0, 0x1
+
+    return v0
 .end method
 
-.method public closingSystemDialogs(Ljava/lang/String;)V
-    .locals 0
-    .annotation system Ldalvik/annotation/Signature;
-        value = {
-            "(",
-            "Ljava/lang/String;",
-            ")V"
-        }
-    .end annotation
-
+.method public activityStarting(Landroid/content/Intent;Ljava/lang/String;)Z
+    .locals 1
+    .parameter
+    .parameter
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
-    return-void
+    .prologue
+    .line 119
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public appCrashed(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;JLjava/lang/String;)Z
+    .locals 1
+    .parameter
+    .parameter
+    .parameter
+    .parameter
+    .parameter
+    .parameter
+    .annotation runtime Ljava/lang/Override;
+    .end annotation
+
+    .prologue
+    .line 127
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public appEarlyNotResponding(Ljava/lang/String;ILjava/lang/String;)I
+    .locals 1
+    .parameter
+    .parameter
+    .parameter
+    .annotation runtime Ljava/lang/Override;
+    .end annotation
+
+    .prologue
+    .line 134
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public appNotResponding(Ljava/lang/String;ILjava/lang/String;)I
+    .locals 1
+    .parameter
+    .parameter
+    .parameter
+    .annotation runtime Ljava/lang/Override;
+    .end annotation
+
+    .prologue
+    .line 141
+    const/4 v0, 0x0
+
+    return v0
 .end method

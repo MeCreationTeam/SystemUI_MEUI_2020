@@ -24,7 +24,7 @@
     .parameter
 
     .prologue
-    .line 120
+    .line 172
     new-instance v0, Landroid/os/Handler;
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
@@ -59,10 +59,10 @@
     .end annotation
 
     .prologue
-    .line 125
+    .line 177
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 127
+    .line 179
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
 
     iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$MeSettingsObserver;->this$0:Lcom/android/systemui/statusbar/StatusBarView;
