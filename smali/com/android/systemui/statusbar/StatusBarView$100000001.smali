@@ -80,14 +80,37 @@
 .end method
 
 .method public activityStarting(Landroid/content/Intent;Ljava/lang/String;)Z
-    .locals 1
+    .locals 3
     .parameter
     .parameter
     .annotation runtime Ljava/lang/Override;
     .end annotation
 
     .prologue
+    .line 118
+    new-instance v0, Landroid/os/Message;
+
+    invoke-direct {v0}, Landroid/os/Message;-><init>()V
+
     .line 119
+    new-instance v1, Landroid/os/Bundle;
+
+    invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
+
+    .line 120
+    const-string v2, "pkgName"
+
+    invoke-virtual {v1, v2, p2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 121
+    invoke-virtual {v0, v1}, Landroid/os/Message;->setData(Landroid/os/Bundle;)V
+
+    .line 122
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarView$100000001;->val$mHandler:Landroid/os/Handler;
+
+    invoke-virtual {v1, v0}, Landroid/os/Handler;->sendMessage(Landroid/os/Message;)Z
+
+    .line 123
     const/4 v0, 0x1
 
     return v0
@@ -105,7 +128,7 @@
     .end annotation
 
     .prologue
-    .line 127
+    .line 131
     const/4 v0, 0x0
 
     return v0
@@ -120,7 +143,7 @@
     .end annotation
 
     .prologue
-    .line 134
+    .line 138
     const/4 v0, 0x0
 
     return v0
@@ -135,7 +158,7 @@
     .end annotation
 
     .prologue
-    .line 141
+    .line 145
     const/4 v0, 0x0
 
     return v0

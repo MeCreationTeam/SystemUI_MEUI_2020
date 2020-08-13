@@ -3,7 +3,7 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
         <LinearLayout android:orientation="horizontal" android:id="@id/navbuttons" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
             <ImageButton android:id="@id/back" android:background="@drawable/ic_sysbar_apps" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" android:layout_weight="1.0" android:layout_toRightOf="@id/home" />
-            <ImageButton android:id="@id/home" android:background="@drawable/ic_sysbar_apps" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:scaleType="centerInside" android:layout_weight="1.0" android:layout_centerInParent="true" />
-            <ImageButton android:id="@id/menu" android:background="@drawable/ic_sysbar_apps" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:scaleType="centerInside" android:layout_weight="1.0" android:layout_toRightOf="@id/home" />
+            <ImageButton android:id="@id/home" android:background="@drawable/ic_sysbar_apps" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:scaleType="fitCenter" android:layout_weight="1.0" android:layout_centerInParent="true" />
+            <ImageButton android:id="@id/menu" android:background="@drawable/ic_sysbar_apps" android:padding="10.0px" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:scaleType="fitCenter" android:layout_weight="1.0" android:layout_toRightOf="@id/home" />
         </LinearLayout>
 </com.android.systemui.statusbar.NavigationBarView>
