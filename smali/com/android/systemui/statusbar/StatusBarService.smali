@@ -12,7 +12,16 @@
         Lcom/android/systemui/statusbar/StatusBarService$MyTicker;,
         Lcom/android/systemui/statusbar/StatusBarService$Launcher;,
         Lcom/android/systemui/statusbar/StatusBarService$H;,
-        Lcom/android/systemui/statusbar/StatusBarService$ExpandedDialog;
+        Lcom/android/systemui/statusbar/StatusBarService$ExpandedDialog;,
+        Lcom/android/systemui/statusbar/StatusBarService$100000000;,
+        Lcom/android/systemui/statusbar/StatusBarService$100000001;,
+        Lcom/android/systemui/statusbar/StatusBarService$1;,
+        Lcom/android/systemui/statusbar/StatusBarService$2;,
+        Lcom/android/systemui/statusbar/StatusBarService$3;,
+        Lcom/android/systemui/statusbar/StatusBarService$4;,
+        Lcom/android/systemui/statusbar/StatusBarService$5;,
+        Lcom/android/systemui/statusbar/StatusBarService$6;,
+        Lcom/android/systemui/statusbar/StatusBarService$7;
     }
 .end annotation
 
@@ -173,9 +182,9 @@
 
     new-instance v0, Lcom/android/systemui/statusbar/StatusBarService$H;
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p0, v1}, Lcom/android/systemui/statusbar/StatusBarService$H;-><init>(Lcom/android/systemui/statusbar/StatusBarService;Lcom/android/systemui/statusbar/StatusBarService$1;)V
+    invoke-direct {v0, p0, v3}, Lcom/android/systemui/statusbar/StatusBarService$H;-><init>(Lcom/android/systemui/statusbar/StatusBarService;Lcom/android/systemui/statusbar/StatusBarService$1;)V
 
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mHandler:Lcom/android/systemui/statusbar/StatusBarService$H;
 
@@ -208,9 +217,7 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mAbsPos:[I
 
     iput v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->mDisabled:I
-# MEUI
-    const/4 v1, 0x1
-    
+# MEUI    
     iput-boolean v1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
 
     iput-boolean v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
