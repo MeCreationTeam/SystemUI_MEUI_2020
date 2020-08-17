@@ -570,7 +570,6 @@
     <public type="dimen" name="status_bar_expanded_clear_button_width" id="0x7f070003" />
     <public type="dimen" name="quickpanel_button_height" id="0x7f070004" />
     <public type="dimen" name="net_traffic_single_text_size" id="0x7f070005" />
-    <public type="dimen" name="net_traffic_multi_text_size" id="0x7f070006" />
     <public type="string" name="app_label" id="0x7f080000" />
     <public type="string" name="status_bar_clear_all_button" id="0x7f080001" />
     <public type="string" name="status_bar_no_notifications_title" id="0x7f080002" />

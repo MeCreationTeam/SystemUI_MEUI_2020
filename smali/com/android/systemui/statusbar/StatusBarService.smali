@@ -3878,13 +3878,13 @@
     .line 236
     iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
 
-    if-eqz v0, :cond_0
+    if-eqz v0, :cond_4
 
     .line 237
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->addNavigationBar()V
 
     .line 239
-    :cond_0
+    :cond_4
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mStatusBarView:Lcom/android/systemui/statusbar/StatusBarView;
 
     new-instance v1, Lcom/android/systemui/statusbar/StatusBarService$100000001;
