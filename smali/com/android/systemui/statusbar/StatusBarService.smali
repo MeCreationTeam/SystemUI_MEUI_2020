@@ -3650,11 +3650,11 @@
 
     move-result-object v0
 
-    const-string v2, "navbar_enabled"
+    const-string v7, "navbar_enabled"
 
-    const/4 v3, 0x1
+    const/4 v6, 0x1
 
-    invoke-static {v0, v2, v3}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+    invoke-static {v0, v7, v6}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -3670,9 +3670,9 @@
 
     move-result-object v0
 
-    const-string v2, "navbar_exchange"
+    const-string v7, "navbar_exchange"
 
-    invoke-static {v0, v2, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+    invoke-static {v0, v7, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -3688,9 +3688,9 @@
 
     move-result-object v0
 
-    const-string v2, "navbar_statusbarcolor"
+    const-string v7, "navbar_statusbarcolor"
 
-    invoke-static {v0, v2, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+    invoke-static {v0, v7, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -3706,21 +3706,21 @@
 
     move-result-object v0
 
-    const-string v2, "content://com.meui.settings"
+    const-string v7, "content://com.meui.settings"
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v2
+    move-result-object v7
 
-    new-instance v3, Lcom/android/systemui/statusbar/StatusBarService$100000000;
+    new-instance v6, Lcom/android/systemui/statusbar/StatusBarService$100000000;
 
     new-instance v4, Landroid/os/Handler;
 
     invoke-direct {v4}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v3, p0, v4}, Lcom/android/systemui/statusbar/StatusBarService$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarService;Landroid/os/Handler;)V
+    invoke-direct {v6, p0, v4}, Lcom/android/systemui/statusbar/StatusBarService$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarService;Landroid/os/Handler;)V
 
-    invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+    invoke-virtual {v0, v7, v1, v6}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
 # MEUI END
     const-string v7, "window"
 
