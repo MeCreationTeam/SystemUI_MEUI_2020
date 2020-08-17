@@ -43,34 +43,26 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 2
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "()V"
         }
     .end annotation
 
+    .prologue
+    .line 1203
+    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
+
+    iget-object v1, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
+
     const/4 v0, 0x0
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mShowBack:I
-    invoke-static {v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000008(Lcom/android/systemui/statusbar/NavigationBarView;)I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    if-ne v1, v2, :cond_1
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
 
     check-cast v0, Landroid/graphics/Bitmap;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
+    .line 1204
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
@@ -79,65 +71,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mShowBack:I
-    invoke-static {v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000008(Lcom/android/systemui/statusbar/NavigationBarView;)I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    if-ne v1, v2, :cond_2
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mInputShow:Z
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000010(Lcom/android/systemui/statusbar/NavigationBarView;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
-
-    const v1, 0x7f0201cc
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
-
-    check-cast v0, Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000004;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
-
-    const v1, 0x7f0201cb
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
-
-    goto :goto_0
 .end method

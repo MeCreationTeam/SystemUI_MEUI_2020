@@ -18,6 +18,18 @@
 
 
 # instance fields
+.field private isLastNavBarEnabled:Z
+
+.field private isLastNavBarExchange:Z
+
+.field private isLastSameColor:Z
+
+.field private isNewBarEnabled:Z
+
+.field private isNewBarExchange:Z
+
+.field private isNewSameColor:Z
+
 .field expanded:Lcom/android/systemui/statusbar/ExpandedView;
 
 .field mAbsPos:[I
@@ -155,7 +167,7 @@
 
     const/4 v3, 0x0
 
-    const/4 v2, 0x2
+    const/4 v2, 0x2 
 
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
@@ -196,6 +208,20 @@
     iput-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mAbsPos:[I
 
     iput v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->mDisabled:I
+# MEUI
+    const/4 v1, 0x1
+    
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
+
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
+
+    iput-boolean v1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
+
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarExchange:Z
+
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastSameColor:Z
+
+    iput-boolean v3, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewSameColor:Z
 
     const v0, 0x7f020107
 
@@ -279,6 +305,133 @@
 
     return-object v0
 .end method
+# MEUI
+.method static synthetic access$1000033(Lcom/android/systemui/statusbar/StatusBarService;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->addNavigationBar()V
+
+    return-void
+.end method
+
+.method static synthetic access$1000036(Lcom/android/systemui/statusbar/StatusBarService;)V
+    .locals 0
+
+    invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->removeNavigationBar()V
+
+    return-void
+.end method
+.method static synthetic access$L1000006(Lcom/android/systemui/statusbar/StatusBarService;)Lcom/android/systemui/statusbar/NavigationBarView;
+    .locals 1
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mNavigationBarView:Lcom/android/systemui/statusbar/NavigationBarView;
+
+    return-object v0
+.end method
+
+.method static synthetic access$L1000007(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
+
+    return v0
+.end method
+
+.method static synthetic access$L1000008(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
+
+    return v0
+.end method
+
+.method static synthetic access$L1000009(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
+
+    return v0
+.end method
+
+.method static synthetic access$L1000010(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarExchange:Z
+
+    return v0
+.end method
+
+.method static synthetic access$L1000011(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastSameColor:Z
+
+    return v0
+.end method
+
+.method static synthetic access$L1000012(Lcom/android/systemui/statusbar/StatusBarService;)Z
+    .locals 1
+
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewSameColor:Z
+
+    return v0
+.end method
+.method static synthetic access$S1000006(Lcom/android/systemui/statusbar/StatusBarService;Lcom/android/systemui/statusbar/NavigationBarView;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->mNavigationBarView:Lcom/android/systemui/statusbar/NavigationBarView;
+
+    return-void
+.end method
+
+.method static synthetic access$S1000007(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
+
+    return-void
+.end method
+
+.method static synthetic access$S1000008(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
+
+    return-void
+.end method
+
+.method static synthetic access$S1000009(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
+
+    return-void
+.end method
+
+.method static synthetic access$S1000010(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarExchange:Z
+
+    return-void
+.end method
+
+.method static synthetic access$S1000011(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastSameColor:Z
+
+    return-void
+.end method
+
+.method static synthetic access$S1000012(Lcom/android/systemui/statusbar/StatusBarService;Z)V
+    .locals 0
+
+    iput-boolean p1, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewSameColor:Z
+
+    return-void
+.end method
+
 
 .method private addNavigationBar()V
     .locals 3
@@ -288,10 +441,13 @@
         }
     .end annotation
 
+    .prologue
+    .line 1513
     iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mNavigationBarView:Lcom/android/systemui/statusbar/NavigationBarView;
 
     invoke-virtual {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->reorient()V
 
+    .line 1514
     invoke-static {}, Landroid/view/WindowManagerImpl;->getDefault()Landroid/view/WindowManagerImpl;
 
     move-result-object v0
@@ -340,8 +496,11 @@
 .method private getNavBarSize()I
     .locals 3
 
+    .prologue
+    .line 1555
     const/16 v0, 0x19
 
+    .line 1557
     const/4 v1, 0x1
 
     int-to-float v0, v0
@@ -360,22 +519,32 @@
 
     float-to-int v0, v0
 
+    .line 1559
     return v0
 .end method
 
 .method private getNavigationBarLayoutParams()Landroid/view/WindowManager$LayoutParams;
     .locals 7
 
+    .prologue
     const/4 v6, 0x0
 
-    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getResources()Landroid/content/res/Resources;
+    .line 1525
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
+
+    if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getNavBarSize()I
 
-    move-result v2
+    move-result v0
 
+    move v2, v0
+
+    .line 1527
+    :goto_0
     const/4 v5, -0x3
 
+    .line 1535
     new-instance v0, Landroid/view/WindowManager$LayoutParams;
 
     const/4 v1, -0x1
@@ -386,17 +555,27 @@
 
     invoke-direct/range {v0 .. v5}, Landroid/view/WindowManager$LayoutParams;-><init>(IIIII)V
 
+    .line 1548
     const-string v1, "NavigationBar"
 
     invoke-virtual {v0, v1}, Landroid/view/WindowManager$LayoutParams;->setTitle(Ljava/lang/CharSequence;)V
 
+    .line 1549
     const/16 v1, 0x57
 
     iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
+    .line 1550
     iput v6, v0, Landroid/view/WindowManager$LayoutParams;->windowAnimations:I
 
+    .line 1552
     return-object v0
+
+    :cond_0
+    move v2, v6
+
+    .line 1525
+    goto :goto_0
 .end method
 
 .method private loadAnim(ILandroid/view/animation/Animation$AnimationListener;)Landroid/view/animation/Animation;
@@ -954,6 +1133,28 @@
     iget-object v6, p0, Lcom/android/systemui/statusbar/StatusBarService;->mPowerWidget:Lcom/lidroid/systemui/quickpanel/PowerWidget;
 
     invoke-virtual {v6}, Lcom/lidroid/systemui/quickpanel/PowerWidget;->setupWidget()V
+
+    return-void
+.end method
+
+# MEUI
+.method private removeNavigationBar()V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    .prologue
+    .line 1562
+    invoke-static {}, Landroid/view/WindowManagerImpl;->getDefault()Landroid/view/WindowManagerImpl;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/StatusBarService;->mNavigationBarView:Lcom/android/systemui/statusbar/NavigationBarView;
+
+    invoke-virtual {v0, v1}, Landroid/view/WindowManagerImpl;->removeView(Landroid/view/View;)V
 
     return-void
 .end method
@@ -3436,7 +3637,84 @@
 
 .method public onCreate()V
     .locals 10
+# MEUI
+    .line 163
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getContentResolver()Landroid/content/ContentResolver;
 
+    move-result-object v0
+
+    const-string v2, "navbar_enabled"
+
+    const/4 v3, 0x1
+
+    invoke-static {v0, v2, v3}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
+
+    .line 164
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarEnabled:Z
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
+
+    .line 165
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v2, "navbar_exchange"
+
+    invoke-static {v0, v2, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
+
+    .line 166
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastNavBarExchange:Z
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarExchange:Z
+
+    .line 167
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v2, "navbar_statusbarcolor"
+
+    invoke-static {v0, v2, v1}, Lcom/meui/MeSettings;->getBoolean(Landroid/content/ContentResolver;Ljava/lang/String;Z)Z
+
+    move-result v0
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastSameColor:Z
+
+    .line 168
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isLastSameColor:Z
+
+    iput-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewSameColor:Z
+
+    .line 169
+    invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    const-string v2, "content://com.meui.settings"
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    new-instance v3, Lcom/android/systemui/statusbar/StatusBarService$100000000;
+
+    new-instance v4, Landroid/os/Handler;
+
+    invoke-direct {v4}, Landroid/os/Handler;-><init>()V
+
+    invoke-direct {v3, p0, v4}, Lcom/android/systemui/statusbar/StatusBarService$100000000;-><init>(Lcom/android/systemui/statusbar/StatusBarService;Landroid/os/Handler;)V
+
+    invoke-virtual {v0, v2, v1, v3}, Landroid/content/ContentResolver;->registerContentObserver(Landroid/net/Uri;ZLandroid/database/ContentObserver;)V
+# MEUI END
     const-string v7, "window"
 
     invoke-virtual {p0, v7}, Lcom/android/systemui/statusbar/StatusBarService;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -3596,9 +3874,25 @@
 
     :cond_3
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->addStatusBarView()V
+# MEUI ADD
+    .line 236
+    iget-boolean v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->isNewBarEnabled:Z
 
+    if-eqz v0, :cond_0
+
+    .line 237
     invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->addNavigationBar()V
 
+    .line 239
+    :cond_0
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mStatusBarView:Lcom/android/systemui/statusbar/StatusBarView;
+
+    new-instance v1, Lcom/android/systemui/statusbar/StatusBarService$100000001;
+
+    invoke-direct {v1, p0}, Lcom/android/systemui/statusbar/StatusBarService$100000001;-><init>(Lcom/android/systemui/statusbar/StatusBarService;)V
+
+    invoke-virtual {v0, v1}, Lcom/android/systemui/statusbar/StatusBarView;->setOnBarColorChangeListener(Lcom/android/systemui/statusbar/OnBarColorChangeListener;)V
+# MEUI END
     new-instance v7, Lcom/android/systemui/statusbar/StatusBarPolicy;
 
     invoke-direct {v7, p0}, Lcom/android/systemui/statusbar/StatusBarPolicy;-><init>(Landroid/content/Context;)V

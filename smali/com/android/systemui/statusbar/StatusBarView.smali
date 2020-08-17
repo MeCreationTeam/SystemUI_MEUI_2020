@@ -30,6 +30,8 @@
 
 .field private controller:Landroid/app/IActivityController$Stub;
 
+.field private mListener:Lcom/android/systemui/statusbar/OnBarColorChangeListener;
+
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -726,4 +728,51 @@
     const/4 v0, 0x1
 
     return v0
+.end method
+
+.method public setBackgroundColor(I)V
+    .locals 1
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I)V"
+        }
+    .end annotation
+
+    .annotation runtime Ljava/lang/Override;
+    .end annotation
+
+    .prologue
+    .line 156
+    invoke-super {p0, p1}, Landroid/view/View;->setBackgroundColor(I)V
+
+    .line 157
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mListener:Lcom/android/systemui/statusbar/OnBarColorChangeListener;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarView;->mListener:Lcom/android/systemui/statusbar/OnBarColorChangeListener;
+
+    invoke-virtual {v0, p1}, Lcom/android/systemui/statusbar/OnBarColorChangeListener;->onColorChange(I)V
+
+    :cond_0
+    return-void
+.end method
+
+.method public setOnBarColorChangeListener(Lcom/android/systemui/statusbar/OnBarColorChangeListener;)V
+    .locals 0
+    .parameter
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/android/systemui/statusbar/OnBarColorChangeListener;",
+            ")V"
+        }
+    .end annotation
+
+    .prologue
+    .line 161
+    iput-object p1, p0, Lcom/android/systemui/statusbar/StatusBarView;->mListener:Lcom/android/systemui/statusbar/OnBarColorChangeListener;
+
+    return-void
 .end method

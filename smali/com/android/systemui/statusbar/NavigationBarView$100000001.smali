@@ -43,7 +43,8 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 5
+    .locals 4
+    .parameter
     .annotation system Ldalvik/annotation/Signature;
         value = {
             "(",
@@ -52,41 +53,31 @@
         }
     .end annotation
 
-    const/4 v4, 0x4
-
-    const v3, 0x7f02020c
-
-    const/16 v2, 0x46
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mShowMenu:I
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000007(Lcom/android/systemui/statusbar/NavigationBarView;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
+    .prologue
+    .line 547
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     const/4 v1, 0x3
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000028(Lcom/android/systemui/statusbar/NavigationBarView;I)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000016(Lcom/android/systemui/statusbar/NavigationBarView;I)V
 
+    .line 548
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->updateNaviButtons()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000020(Lcom/android/systemui/statusbar/NavigationBarView;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000012(Lcom/android/systemui/statusbar/NavigationBarView;)V
 
+    .line 549
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mMenuButton:Landroid/widget/ImageButton;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
+    const v1, 0x7f02020c
 
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
+
+    .line 550
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mHandler:Landroid/os/Handler;
@@ -95,95 +86,11 @@
 
     iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mResetMenu:Ljava/lang/Runnable;
 
+    const/16 v2, 0x46
+
     int-to-long v2, v2
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    :cond_0
-    :goto_0
     return-void
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mShowMenu:I
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000007(Lcom/android/systemui/statusbar/NavigationBarView;)I
-
-    move-result v0
-
-    if-ne v0, v4, :cond_2
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    const/16 v1, 0x52
-
-    #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000028(Lcom/android/systemui/statusbar/NavigationBarView;I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #calls: Lcom/android/systemui/statusbar/NavigationBarView;->updateNaviButtons()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000020(Lcom/android/systemui/statusbar/NavigationBarView;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mMenuButton:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mResetMenu:Ljava/lang/Runnable;
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
-
-    :cond_2
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #getter for: Lcom/android/systemui/statusbar/NavigationBarView;->mShowMenu:I
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$L1000007(Lcom/android/systemui/statusbar/NavigationBarView;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
-    invoke-static {v0, v4}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000028(Lcom/android/systemui/statusbar/NavigationBarView;I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    #calls: Lcom/android/systemui/statusbar/NavigationBarView;->updateNaviButtons()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000020(Lcom/android/systemui/statusbar/NavigationBarView;)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mMenuButton:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, v3}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
-
-    iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mHandler:Landroid/os/Handler;
-
-    iget-object v1, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    iget-object v1, v1, Lcom/android/systemui/statusbar/NavigationBarView;->mResetMenu:Ljava/lang/Runnable;
-
-    int-to-long v2, v2
-
-    invoke-virtual {v0, v1, v2, v3}, Landroid/os/Handler;->postDelayed(Ljava/lang/Runnable;J)Z
-
-    goto :goto_0
 .end method

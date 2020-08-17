@@ -26,11 +26,16 @@
 # direct methods
 .method constructor <init>(Lcom/android/systemui/statusbar/NavigationBarView;I)V
     .locals 0
+    .parameter
+    .parameter
 
+    .prologue
+    .line 1380
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     iput-object p1, p0, Lcom/android/systemui/statusbar/NavigationBarView$KeyEventInjector;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
+    .line 1381
     iput p2, p0, Lcom/android/systemui/statusbar/NavigationBarView$KeyEventInjector;->keyCode:I
 
     return-void
@@ -54,6 +59,8 @@
         }
     .end annotation
 
+    .prologue
+    .line 1386
     :try_start_0
     const-string v0, "window"
 
@@ -81,16 +88,19 @@
 
     if-nez v0, :cond_1
 
+    .line 1390
     const-string v0, "NavigationBarView"
 
     const-string v1, "Key down event not injected"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;)I
 
+    .line 1400
     :cond_0
     :goto_0
     return-void
 
+    .line 1393
     :cond_1
     const-string v0, "window"
 
@@ -118,6 +128,7 @@
 
     if-nez v0, :cond_0
 
+    .line 1397
     const-string v0, "NavigationBarView"
 
     const-string v1, "Key up event not injected"
@@ -131,6 +142,7 @@
     :catch_0
     move-exception v0
 
+    .line 1400
     const-string v1, "NavigationBarView"
 
     const-string v2, "Error injecting key event"
@@ -138,6 +150,4 @@
     invoke-static {v1, v2, v0}, Landroid/util/Slog;->w(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
     goto :goto_0
-
-    nop
 .end method
