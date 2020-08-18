@@ -3645,6 +3645,8 @@
 .method public onCreate()V
     .locals 10
 # MEUI
+    const/4 v1, 0x0
+
     .line 163
     invoke-virtual {p0}, Lcom/android/systemui/statusbar/StatusBarService;->getContentResolver()Landroid/content/ContentResolver;
 
