@@ -60,13 +60,13 @@
     const/4 v1, 0x3
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000016(Lcom/android/systemui/statusbar/NavigationBarView;I)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000009(Lcom/android/systemui/statusbar/NavigationBarView;I)V
 
     .line 548
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->updateNaviButtons()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000012(Lcom/android/systemui/statusbar/NavigationBarView;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000005(Lcom/android/systemui/statusbar/NavigationBarView;)V
 
     .line 549
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;

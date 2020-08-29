@@ -449,11 +449,6 @@
     .end annotation
 
     .prologue
-    .line 1513
-    iget-object v0, p0, Lcom/android/systemui/statusbar/StatusBarService;->mNavigationBarView:Lcom/android/systemui/statusbar/NavigationBarView;
-
-    invoke-virtual {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->reorient()V
-
     .line 1514
     invoke-static {}, Landroid/view/WindowManagerImpl;->getDefault()Landroid/view/WindowManagerImpl;
 

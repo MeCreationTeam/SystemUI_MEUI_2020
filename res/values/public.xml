@@ -560,7 +560,6 @@
     <public type="layout" name="quickpanel_scrollview" id="0x7f03001f" />
     <public type="xml" name="bookmarks" id="0x7f040000" />
     <public type="xml" name="weak_signal_warning" id="0x7f040001" />
-    <public type="color" name="white" id="0x7f050000" />
     <public type="bool" name="config_hspa_data_distinguishable" id="0x7f060000" />
     <public type="dimen" name="status_bar_edge_ignore" id="0x7f070000" />
     <public type="dimen" name="status_bar_expanded_notification_clear_button_text_size" id="0x7f070001" />

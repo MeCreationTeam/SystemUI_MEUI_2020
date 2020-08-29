@@ -63,20 +63,20 @@
     const/4 v1, 0x3
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
-    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000016(Lcom/android/systemui/statusbar/NavigationBarView;I)V
+    invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000009(Lcom/android/systemui/statusbar/NavigationBarView;I)V
 
     .line 467
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000000;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->updateNaviButtons()V
-    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000012(Lcom/android/systemui/statusbar/NavigationBarView;)V
+    invoke-static {v0}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000005(Lcom/android/systemui/statusbar/NavigationBarView;)V
 
     .line 468
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000000;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mHomeButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02020c
+    const v1, 0x7f02020c # MEUI navibar_touch
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
