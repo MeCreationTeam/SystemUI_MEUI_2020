@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="TextAppearance.StatusBar.Title" parent="@*android:style/Theme.Holo.Light.Panel">
+    <style name="TextAppearance.StatusBar.Title" parent="@android:style/TextAppearance.Small">
         <item name="android:textAppearance">?android:textAppearanceSmall</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@drawable/notification_header_text_color</item>
     </style>
-    <style name="TextAppearance.StatusBar.IntruderAlert" parent="@*android:style/Theme.Holo.Light.Panel" />
+    <style name="TextAppearance.StatusBar.IntruderAlert" parent="android:style/TextAppearance.Small" />
     <style name="TextAppearance.StatusBar.Traffic" parent="@*android:style/TextAppearance.StatusBar.Icon">
         <item name="android:textSize">14.0dip</item>
         <item name="android:textStyle">normal</item>
