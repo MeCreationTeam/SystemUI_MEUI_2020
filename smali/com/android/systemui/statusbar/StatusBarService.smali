@@ -450,6 +450,7 @@
 
     .prologue
     .line 1514
+        invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->meuiA()V
     invoke-static {}, Landroid/view/WindowManagerImpl;->getDefault()Landroid/view/WindowManagerImpl;
 
     move-result-object v0
@@ -461,7 +462,7 @@
     move-result-object v2
 
     invoke-virtual {v0, v1, v2}, Landroid/view/WindowManagerImpl;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
+        invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->meuiF()V
     return-void
 .end method
 
@@ -1150,6 +1151,7 @@
 
     .prologue
     .line 1562
+            invoke-direct {p0}, Lcom/android/systemui/statusbar/StatusBarService;->meuiR()V
     invoke-static {}, Landroid/view/WindowManagerImpl;->getDefault()Landroid/view/WindowManagerImpl;
 
     move-result-object v0

@@ -12,11 +12,11 @@
     <application android:label="@string/app_label" android:allowClearUserData="false" android:persistent="true">
         <service android:name=".statusbar.StatusBarService" android:exported="false" />
         <activity android:name=".usb.UsbStorageActivity" android:excludeFromRecents="true" />
-        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name="com.android.internal.app.ExternalMediaFormatActivity" android:excludeFromRecents="true" />
-        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbConfirmActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
-        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbPermissionActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
-        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbResolverActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
-        <activity android:theme="@*android:style/Widget.Holo.HorizontalScrollView" android:name=".usb.UsbAccessoryUriActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:name="com.android.internal.app.ExternalMediaFormatActivity" android:excludeFromRecents="true" />
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:name=".usb.UsbConfirmActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:name=".usb.UsbPermissionActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:name=".usb.UsbResolverActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
+        <activity android:theme="@*android:style/Theme.Dialog.Alert" android:name=".usb.UsbAccessoryUriActivity" android:permission="android.permission.MANAGE_USB" android:exported="true" android:excludeFromRecents="true" android:finishOnCloseSystemDialogs="true" />
         <receiver android:name=".usb.StorageNotifyRecevier">
             <intent-filter />
         </receiver>
