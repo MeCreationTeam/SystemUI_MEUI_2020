@@ -67,7 +67,7 @@
 
     iget-object v0, v0, Lcom/android/systemui/statusbar/NavigationBarView;->mBackButton:Landroid/widget/ImageButton;
 
-    const v1, 0x7f02020d
+    const v1, 0x7f0201cc
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
 
