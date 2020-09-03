@@ -57,7 +57,7 @@
     .line 547
     iget-object v0, p0, Lcom/android/systemui/statusbar/NavigationBarView$100000001;->this$0:Lcom/android/systemui/statusbar/NavigationBarView;
 
-    const/4 v1, 0x3
+    const/16 v1, 0x52
 
     #calls: Lcom/android/systemui/statusbar/NavigationBarView;->simulateKeypress(I)V
     invoke-static {v0, v1}, Lcom/android/systemui/statusbar/NavigationBarView;->access$1000009(Lcom/android/systemui/statusbar/NavigationBarView;I)V
